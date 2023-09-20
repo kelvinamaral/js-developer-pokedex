@@ -25,7 +25,7 @@ a.menu_item {
     }
 
 a.menu_item.active {
-    border-bottom: 5px solid #8a96e3;
+    border-bottom: 2px solid #8a96e3;
     font-weight: bold;
 }
 
@@ -110,4 +110,39 @@ body {
     margin-right: auto;
     width: 50%;
     margin-bottom: -2rem
+}
+
+.semi-title {
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 0.25rem;
+    color: #39424c;
+    padding-bottom: 0.5rem;
+    padding: 10px;
+}
+
+.data{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.high_light{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.fa-mars{
+    color: #bcc3f0;
+}
+
+.fa-venus{
+    color: #f6acc7;
 }
