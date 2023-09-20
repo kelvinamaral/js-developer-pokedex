@@ -84,6 +84,7 @@ body {
     background-color: #77c850;
     border-radius: 1rem;
     filter: brightness(1.1);
+    text-align: center;
 }
 
 
@@ -91,11 +92,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     text-align: right;
 }
 
 .number_b{
     color: white;
+    font-size: 0.8rem;
 }
 
 .imagem_status_pokemon{
