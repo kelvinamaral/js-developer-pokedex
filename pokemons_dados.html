@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/pokemon-data.css">
+</head>
+
+<body>
+    <section class="content">
+        
+        <div class="uppper_buttons_icons">
+            <span class="arrow_button"><i class="fa-solid fa-arrow-left"></i></span>
+            <span class="heart_button"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        
+        <h1 class="pokemon_name_title">bulbasaur</h1>
+
+        <div class="types_a">
+            <li class="">ABC</li>
+
+
+
+        </div>
+
+        <ol class="types">
+            <li class="type fire">fire</li><li class="type flying">flying</li>
+        </ol>
+  
+
+
+            <!-- Imagem -->
+
+        </div>
+
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasaur">
+        <div class="pokemon_status">
+
+            <div class="menu">
+                <!-- Links para as diferentes informações -->
+                <a href="#about" class="menu_item active">About</a>
+                <a href="#baseStats" class="menu_item">Base Stats</a>
+                <a href="#evolution" class="menu_item">Evolution </a>
+                <a href="#moves" class="menu_item">Moves</a>
+                <!-- Adicione mais links conforme necessário -->
+            </div>
+
+                <ol>
+                    <ul style="species">
+                        <span>Species</span>
+                        <span>Seed</span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Height</span>
+                        <span>2'3,6 (0,70 cm)</span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Weight</span>
+                        <span>15.2 lbs(6,9 kg)</span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Abilities</span>
+                        <span>Overgrow, Chlorophyl</span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Species</span>
+                        <span>Seed</span>
+                    </ul>
+
+                    <span style="font-weight: bold;">Breeding</span>
+
+                    <ul style="species">
+                        <span>Gender</span>
+                        <span>
+                            <span>Icon Here - Male</span> <span> | Icon Here - Female</span>
+                        </span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Egg Groups</span>
+                        <span>Monster</span>
+                    </ul>
+
+                    <ul style="species">
+                        <span>Egg Cycle</span>
+                        <span>Grass</span>
+                    </ul>
+
+
+
+                </ol>
+        </div>
+
+            <p>AAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+        <ol id="pokemonList" class="pokemons">
+            <!-- ..... Pokemons here ..... -->
+        </ol>
+
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load More
+            </button>
+        </div>
+    </section>
+
+    <!-- Nosso JS -->
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script>
+     <!-- ..... Script Font Awesome ..... -->
+    <script src="https://kit.fontawesome.com/7351fae1d7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
