@@ -26,22 +26,29 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+// Load Pokémon Itens List
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+const offsetStatus = 0
+limitStatus = 1
+
+function loadPokemonItens(offsetStatus, limitStatus) {
+    pokeApi.getPokemons(offsetStatus, limitStatus).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
 }
 
+// Load Pokémon Status
+
+
 function loadpokemonsStatus(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToStatus).join('')
-        pokemonList.innerHTML += newHtml
+        pokemon_status_load.innerHTML += newHtml
     })
 }
 
-loadpokemonsStatus(offset, limit)
+loadpokemonsStatus(offsetStatus, limitStatus)
 
 loadPokemonItens(offset, limit)
 
@@ -64,7 +71,7 @@ loadMoreButton.addEventListener('click', () => {
 
 function convertPokemonToStatus(pokemon) {
     return `
-                
+            <div>   
     <div class="uppper_buttons_icons">
     <span class="arrow_button"><i class="fa-solid fa-arrow-left"></i></span>
     <span class="heart_button"><i class="fa-regular fa-heart"></i></span>
@@ -77,7 +84,7 @@ function convertPokemonToStatus(pokemon) {
 </div>
 
 <div class="types_status">
-${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+${pokemon.types.map((type) => `<li class="types_status grass_status ${type}">${type}</li>`).join('')}
 </div>
 
 
@@ -86,7 +93,6 @@ ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
 <div class="imagem_status_pokemon"><img src="${pokemon.photo}"
 alt="${pokemon.name}"></div>
 <div class="pokemon_status">
-
     <div class="menu">
         <!-- Links para as diferentes informações -->
         <a href="#about" class="menu_item active">About</a>
@@ -137,7 +143,7 @@ alt="${pokemon.name}"></div>
                 <span class="high_light">Grass</span>
             </ul>
         </ol>
-</div>
+</div> </div> 
     `
 }
 
