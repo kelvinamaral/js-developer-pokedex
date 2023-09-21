@@ -24,19 +24,20 @@ function convertPokemonToLi(pokemon) {
     </li>`;
 }
 
-// Define the function to handle the click event
-function handlePokemonClick(pokemonName, pokemon) {
-    // You can now perform actions based on the clicked Pokémon's name
-    console.log(pokemonName)
-    console.log(pokemon)
-    loadpokemonsStatus(offsetStatus, limitStatus = 10)
-    // Add more code here to load additional information or perform other actions
-}
+loadpokemonsStatus(offset, limit)
+// clicar para carregar (experimental) / Define the function to handle the click event
+// function handlePokemonClick(pokemonName, pokemon) {
+//     // You can now perform actions based on the clicked Pokémon's name
+//     loadpokemonsStatus(offsetStatus, limitStatus = 10)
+//     // Add more code here to load additional information or perform other actions
+// }
+
+// const offsetStatus = 0
+// limitStatus = 1
 
 // Load Pokémon Itens List
 
-const offsetStatus = 0
-limitStatus = 1
+
 
 function loadPokemonItens(offsetStatus, limitStatus) {
     pokeApi.getPokemons(offsetStatus, limitStatus).then((pokemons = []) => {
@@ -53,7 +54,6 @@ function loadpokemonsStatus(offset, limit) {
         pokemon_status_load.innerHTML += newHtml
     })
 }
-
 
 loadPokemonItens(offset, limit)
 
@@ -114,16 +114,13 @@ alt="${pokemon.name}"></div>
             </ul>
             <ul class="table">
                 <span class="data">Weight</span>
-                <span class="high_light">15.2 lbs(6,9 kg)</span>
+                <span class="high_light"> ${pokemon.weight}</span>
             </ul>
             <ul class="table">
                 <span class="data">Abilities</span>
-                <span class="high_light">Overgrow, Chlorophyl</span>
+                <span class="high_light">${pokemon.abilities}</span>
             </ul class="table">
-            <ul class="table">
-                <span class="data">Species</span>
-                <span class="high_light">Seed</span>
-            </ul>
+
             <ul class="semi-title">
                 <span >Breeding</span>
             </ul>
@@ -147,3 +144,4 @@ alt="${pokemon.name}"></div>
 </div> </div> 
     `
 }
+

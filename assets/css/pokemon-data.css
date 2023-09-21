@@ -139,6 +139,7 @@ body {
 .high_light{
     font-size: 0.8rem;
     font-weight: 300;
+    text-transform: capitalize;
 }
 
 .fa-mars{
