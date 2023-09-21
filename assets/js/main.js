@@ -4,11 +4,6 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const pokemon_status_load = document.getElementById('pokemon_status_load')
 const loadStatusButton = document.getElementsByClassName('loadStatusButton')
 
-// -------------
-
-// Get references to all elements with the "clickableDiv" class
-var divElements = document.querySelectorAll(".clickableDiv");
-
 const maxRecords = 15
 const limit = 5
 let offset = 0;
