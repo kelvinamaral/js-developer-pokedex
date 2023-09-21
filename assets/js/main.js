@@ -7,9 +7,9 @@ const maxRecords = 151
 const limit = 5
 let offset = 0;
 
-
+// Link para URL
 function convertPokemonToLi(pokemon) {
-    return `
+    return `<a class="pokemon_link_datail" href="${pokemon.number}"> 
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
@@ -23,7 +23,7 @@ function convertPokemonToLi(pokemon) {
                      alt="${pokemon.name}">
             </div>
         </li>
-    `
+    </a> `
 }
 
 // Load Pokémon Itens List
@@ -86,10 +86,7 @@ function convertPokemonToStatus(pokemon) {
 <div class="types_status">
 ${pokemon.types.map((type) => `<li class="types_status grass_status ${type}">${type}</li>`).join('')}
 </div>
-
-
 <!-- Imagem -->
-
 <div class="imagem_status_pokemon"><img src="${pokemon.photo}"
 alt="${pokemon.name}"></div>
 <div class="pokemon_status">

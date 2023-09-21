@@ -148,3 +148,7 @@ body {
 .fa-venus{
     color: #f6acc7;
 }
+
+.pokemon_link_datail{
+    text-decoration: none;
+}

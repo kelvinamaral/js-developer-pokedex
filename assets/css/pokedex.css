@@ -120,6 +120,8 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-transform: capitalize;
+
 }
 
 .pokemon .detail img {
