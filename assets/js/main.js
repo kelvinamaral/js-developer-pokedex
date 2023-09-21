@@ -24,20 +24,21 @@ function convertPokemonToLi(pokemon) {
     </li>`;
 }
 
-loadpokemonsStatus(offset, limit)
-// clicar para carregar (experimental) / Define the function to handle the click event
-// function handlePokemonClick(pokemonName, pokemon) {
-//     // You can now perform actions based on the clicked Pokémon's name
-//     loadpokemonsStatus(offsetStatus, limitStatus = 10)
-//     // Add more code here to load additional information or perform other actions
-// }
+// Habilitar para facilitar o Debug;
+// loadpokemonsStatus(offset, limit)
 
-// const offsetStatus = 0
-// limitStatus = 1
+
+// clicar para carregar (experimental) / Define the function to handle the click event
+function handlePokemonClick(pokemonName, pokemon) {
+    // You can now perform actions based on the clicked Pokémon's name
+    loadpokemonsStatus(offsetStatus, limitStatus = 10)
+    // Add more code here to load additional information or perform other actions
+}
+
+const offsetStatus = 0
+limitStatus = 1
 
 // Load Pokémon Itens List
-
-
 
 function loadPokemonItens(offsetStatus, limitStatus) {
     pokeApi.getPokemons(offsetStatus, limitStatus).then((pokemons = []) => {
