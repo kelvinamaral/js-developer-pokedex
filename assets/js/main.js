@@ -9,15 +9,6 @@ const loadStatusButton = document.getElementsByClassName('loadStatusButton')
 // Get references to all elements with the "clickableDiv" class
 var divElements = document.querySelectorAll(".clickableDiv");
 
-// Add a click event listener to each div element
-divElements.forEach(function (divElement) {
-    divElement.addEventListener("click", function () {
-        // Code to execute when a div is clicked
-        console.log('Olá!');
-    });
-});
-// -------------
-
 const maxRecords = 15
 const limit = 5
 let offset = 0;
@@ -41,11 +32,10 @@ function convertPokemonToLi(pokemon) {
 // Define the function to handle the click event
 function handlePokemonClick(pokemonName, pokemon) {
     // You can now perform actions based on the clicked Pokémon's name
-    console.log(`Clicked on Pokémon: ${pokemonName}`);
-    console.log(`Clicked on Pokémon: ${pokemon.number}`);
-    loadpokemonsStatus(offsetStatus, limitStatus = 3)
+    console.log(pokemonName)
+    console.log(pokemon)
+    loadpokemonsStatus(offsetStatus, limitStatus = 10)
     // Add more code here to load additional information or perform other actions
-
 }
 
 // Load Pokémon Itens List
@@ -68,6 +58,7 @@ function loadpokemonsStatus(offset, limit) {
         pokemon_status_load.innerHTML += newHtml
     })
 }
+
 
 loadPokemonItens(offset, limit)
 
